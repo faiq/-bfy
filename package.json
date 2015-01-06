@@ -1,0 +1,15 @@
+{
+  "name": "bfy",
+  "version": "1.0.0",
+  "description": "whatever",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "browserify -r lodash:underscore index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^8.0.3",
+    "lodash": "^2.4.1"
+  }
+}
