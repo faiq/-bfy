@@ -4,7 +4,7 @@
   "description": "whatever",
   "main": "index.js",
   "scripts": {
-    "bundle": "browserify -d app/yo.js > bundle.js"
+    "bundle": "BROWSERIFYSWAP_ENV='dev' browserify -d app/yo.js > bundle.js"
   },
   "author": "",
   "license": "ISC",
@@ -23,7 +23,7 @@
     "@packages": [
       "underscore"
     ],
-    "all": {
+    "dev": {
       "underscore.js$": "lodash"
     }
   }
