@@ -4,12 +4,27 @@
   "description": "whatever",
   "main": "index.js",
   "scripts": {
-    "bundle": "browserify -r lodash:underscore index.js"
+    "bundle": "browserify -d app/yo.js > bundle.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "backbone": "^1.1.2",
     "browserify": "^8.0.3",
+    "browserify-swap": "^0.2.1",
     "lodash": "^2.4.1"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-swap"
+    ]
+  },
+  "browserify-swap": {
+    "@packages": [
+      "underscore"
+    ],
+    "all": {
+      "underscore.js$": "lodash"
+    }
   }
 }
